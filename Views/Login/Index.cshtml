@@ -1,0 +1,31 @@
+﻿@model Proyecto.Models.Usuario
+@{
+	Layout = "~/Views/Shared/_LayoutVacio.cshtml";
+}
+<div class="container">
+	<div class="screen">
+		<div class="screen__content">
+			<form class="login" asp-controller="Login" asp-action="IniciarSesion" method="post">
+				<div class="login__field">
+					<i class="login__icon fas fa-user"></i>
+					<input type="text" asp-for="Email" class="login__input" placeholder="Correo Electronico"><br />
+					<span asp-validation-for="Email" class="validation-error"></span>
+				</div>
+				<div class="login__field">
+					<input type="password" asp-for="Password" class="login__input" placeholder="Contraseña"><br />
+					<span asp-validation-for="Password" class="validation-error"></span>
+				</div>
+				<button class="button login__submit">
+					<span class="button__text">Iniciar Sesion</span>
+				</button>
+			</form>
+		</div>
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>
+
+	</div>
+</div>
