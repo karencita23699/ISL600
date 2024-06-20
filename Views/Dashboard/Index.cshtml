@@ -1,6 +1,31 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+﻿@{
+    Layout = "~/Views/Shared/_LayoutInicio.cshtml";
 }
+@model List<Proyecto.Models.BD.Campeonato>;
+<div class="main">
+    <div class="wt-info-lower-content">
+        <h3 class="wt-title m-b20">COMPETICIONES DE FUTBOL</h3>
+        <div class="row clearfix schedule-column-outer">
+            @foreach(var item in Model)
+            {
+                <div class="schedule-column col-lg-4 col-md-4 col-sm-6 col-6">
+                    <a href="torneo.html">
+                        <div class="inner-column">
+
+                            <h5>@item.Nombre</h5>
+                            <div class=""></div>
+                            <div class="time">Inicio: <span>@item.FechaInicio</span>  Hasta: <span>@item.FechaFin</span></div>
+                            <form method="post" action="/RutaParaAdministrar">
+                                <input type="hidden" name="id" value="@item.CampeonatoId" />
+                                <button class="button submit">
+                                    <input type="hidden" asp-for="@item.CampeonatoId" />
+                                    <span class="button__text">Administrar</span>
+                                </button>
+                            </form>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

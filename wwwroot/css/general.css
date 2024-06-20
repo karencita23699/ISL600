@@ -1,0 +1,38 @@
+﻿:root {
+    --background: #FFFFFF;
+    --navbar-width: 256px;
+    --navbar-width-min: 80px;
+    --navbar-dark-primary: #151A28;
+    --navbar-dark-secondary: #000000;
+    --navbar-light-primary: #D95F18;
+    --navbar-light-secondary: #D95F18;
+    --color-content: #FAFBFE;
+    --button: #ff6a01;
+    --sombra: #afacac;
+}
+body{
+    background: var(--background);
+}
+.form {
+    width: 100%;
+    padding: 30px;
+    border-radius: 16px;
+    flex: 1;
+    overflow: hidden;
+}
+.input_form {
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px var(--sombra);
+    height: 40px;
+    width: 50%;
+    border: none;
+}
+.form-group {
+    width: 100%;
+    margin-left: 50px;
+}
+.input_form:hover,
+.input_form:active,
+.input_form:focus{
+    border: 1px solid var(--navbar-dark-primary);
+}

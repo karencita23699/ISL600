@@ -1,6 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
-
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,12 +9,13 @@
     <link href="~/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css">
     <link href="~/css/icons.min.css" rel="stylesheet" type="text/css">
     <link href="~/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
-
-    <link href="~/css/navBar/all.min.css" rel="stylesheet" type="text/css" />
-
-    <link href="~/css/navBar/style.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/navBar/all.min.css" rel="stylesheet" type="text/css">
+    <link href="~/css/navBar/style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+    <!--Estilos cards-->
+    <link rel="stylesheet" type="text/css" href="~/css/style.css">
+    <link rel="stylesheet" type="text/css" href="~/css/general.css" />
+    
 </head>
 
 <body data-sidebar="dark">
@@ -31,20 +31,13 @@
             <div id="nav-content">
                 <div class="nav-button"><i class="fas fa-trophy"></i><span>Campeonatos</span></div>
                 <div class="nav-submenu">
+                    <a asp-controller="Dashboard" asp-action="Registrar" class="nav-button">
+                        <i class="fas fa-palette"></i><span>Crear</span>
+                    </a>
                     <a href="/ver-campeonatos" class="nav-button">
-                        <i class="fas fa-palette"></i><span>Ver Campeonatos</span>
+                        <i class="fas fa-palette"></i><span>Administrar</span>
                     </a>
                 </div>
-                <div class="nav-button"><i class="fas fa-images"></i><span>Modificar Campeonato</span></div>
-                <hr />
-                <div class="nav-button"><i class="fas fa-heart"></i><span>Ver Equipos</span></div>
-                <hr />
-                <div class="nav-button"><i class="fas fa-chart-line"></i><span>Registrar Arbitros</span></div>
-                <hr />
-                <div class="nav-button"><i class="fas fa-fire"></i><span>Crear Fixture</span></div>
-                <div class="nav-button"><i class="fas fa-magic"></i><span>Ver Fixture</span></div>
-                <hr />
-                <div class="nav-button"><i class="fas fa-gem"></i><span>Puntuaciones</span></div>
                 <div id="nav-content-highlight"></div>
             </div>
             <input id="nav-footer-toggle" type="checkbox" />
@@ -78,13 +71,12 @@
             </div>
         </footer>
         <!-- JAVASCRIPT -->
-        
+
         <script src="~/js/jquery.min.js"></script>
         <script src="~/js/bootstrap.bundle.min.js"></script>
         <script src="~/lib/metismenu/metisMenu.min.js"></script>
         <script src="~/lib/simplebar/simplebar.min.js"></script>
         <script src="~/lib/node-waves/waves.min.js"></script>
-
         <script src="~/lib/peity/jquery.peity.min.js"></script>
         <script src="~/lib/chartist/chartist.min.js"></script>
         <script src="~/lib/chartist-plugin-tooltips/chartist-plugin-tooltip.min.js"></script>
